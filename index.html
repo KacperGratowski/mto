@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+    <div class="chat-bubble" onclick="toggleChat()">
+        <i class="fas fa-comment"></i>
+    </div>
+    <div id="chat-popup" class="chat-popup">
+        <div class="close-button" onclick="closePopup()">&times;</div>
+        <div class="chat-popup-content">
+            <h2>Report Inappropriate Ad</h2>
+            <form id="reportForm" action="process.php" method="POST" enctype="multipart/form-data">
+                <div class="form-group">
+                    <label for="image">Upload Image:</label>
+                    <input type="file" id="image" name="image" accept="image/*" required>
+                </div>
+                <div class="form-group">
+                    <label for="discord-uuid">Discord UUID:</label>
+                    <input type="text" id="discord-uuid" name="discord-uuid" required>
+                </div>
+                <div class="form-group">
+                    <button type="submit">Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="js/script.js"></script>
+</body>
+</html>
